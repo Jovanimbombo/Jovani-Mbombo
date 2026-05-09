@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Jovani Mbombo</title>
+<meta name="description" content="Jovani Mbombo, Étudiant en Génie Informatique à l'Université Pédagogique Nationale (UPN). Développeur Web Junior à Kinshasa, RDC. Each Bug Matters." />
+<meta name="keywords" content="Jovani Mbombo, Mbombo Jovani, Génie Informatique, UPN, développeur web, Kinshasa, RDC, HTML, CSS, JavaScript, Each Bug Matters , Chaque Erreur Compte" />
+
+<meta property="og:title" content="Jovani Mbombo – Portfolio Professionnel" />
+<meta property="og:description" content="Étudiant en 2ème Licence Génie Informatique à l'UPN. Découvrez mes projets numériques." />
+<meta property="og:image" content="https://jova243.github.io/votre-depot/favicon.jpeg" />
+<meta property="og:url" content="https://jova243.github.io/votre-depot/" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Jovani Mbombo | Étudiant & Développeur" />
+<meta name="twitter:description" content="Génie Informatique  Kinshasa." />
+<meta name="twitter:image" content="https://jova243.github.io/votre-depot/favicon.jpeg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="favicon.jpeg" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">JOVANI MBOMBO</div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-text">Each Bug Matters</p>
+    </div>
+  </div>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">JM<span class="logo-dot">.</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about"     data-i18n="nav.about">À propos</a>
+        <a href="#skills"    data-i18n="nav.skills">Compétences</a>
+        <a href="#services"  data-i18n="nav.services">Services</a>
+        <a href="#projects"  data-i18n="nav.projects">Projets</a>
+        <a href="#journey"   data-i18n="nav.journey">Parcours</a>
+        <a href="#languages" data-i18n="nav.languages">Langues</a>
+        <a href="#contact"   data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="lang-btn" aria-label="Toggle language">
+          <span id="lang-flag">🇬🇧</span>
+          <span id="lang-label">EN</span>
+        </button>
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+          <div class="theme-pill"></div>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-sup reveal-up" data-i18n="hero.sup">Bonjour, je suis</p>
+      <h1 class="hero-name reveal-up">Jovani<br /><span>Mbombo</span></h1>
+      <div class="hero-typewriter reveal-up">
+        <span id="typewriter-text"></span><span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-slogan reveal-up">Each Bug Matters</p>
+      <p class="hero-location reveal-up">
+        <i class="fas fa-map-marker-alt"></i> Kinshasa, RDC
+      </p>
+      <div class="hero-btns reveal-up">
+        <a href="#projects" class="btn-primary" data-i18n="hero.cta1">Voir mes projets</a>
+        <a href="#contact"  class="btn-outline"  data-i18n="hero.cta2">Me contacter</a>
+        <a href="#" class="btn-ghost" id="cv-btn" data-i18n="hero.cv">
+          <i class="fas fa-download"></i> CV
+        </a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="https://github.com/Jovanimbombo" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jovani-mbombo-099b6235a?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/_m_jovani/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@jovanimbombo" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/243854818401" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/jovanimbombo" aria-label="X" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-frame reveal-right">
+        <div class="avatar-glow"></div>
+        <img src="favicon.jpeg" alt="Jovani Mbombo" />
+        
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-card reveal-up">
+        <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+        <p data-i18n="stats.projects">Projets réalisés</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+        <p data-i18n="stats.skills">Compétences</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+        <p data-i18n="stats.years">Ans d'apprentissage</p>
+      </div>
+      <div class="stat-card reveal-up">
+        <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+        <p data-i18n="stats.langs">Langues parlées</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="about.tag">À propos</span>
+        <h2 data-i18n="about.title">Qui suis-je ?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p data-i18n="about.p1">Je suis <strong>Jovani Mbombo</strong>, étudiant  en genie informatique à l'Université Pédagogique Nationale  (RDC), actuellement en 2ème Licence.</p>
+          <p data-i18n="about.p2">Ma passion pour la technologie, le développement web ,mobile,logiciel et l'innovation me pousse chaque jour à repousser mes limites. Je crois fermement que chaque bug est une opportunité d'apprendre et de grandir — <em>Each Bug Matters</em>.</p>
+          <p data-i18n="about.p3">Mon objectif est de devenir un développeur full-stack performant, capable de concevoir des solutions numériques impactantes pour l'Afrique et le monde.</p>
+          <div class="about-tags">
+            <span>🎯 Focus</span><span>💡 Créatif</span><span>Ambitieux</span><span>🤝 Collaboratif</span>
+          </div>
+        </div>
+        <div class="about-info reveal-right">
+          <div class="info-card">
+            <div class="info-row">
+              <i class="fas fa-user"></i>
+              <div><label data-i18n="about.name">Nom</label><span>Jovani Mbombo</span></div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-graduation-cap"></i>
+              <div><label data-i18n="about.univ">Université</label><span>UPN – Kinshasa</span></div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-layer-group"></i>
+              <div><label data-i18n="about.level">Niveau</label><span data-i18n="about.levelVal">2ème Licence</span></div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><label data-i18n="about.city">Ville</label><span>Kinshasa, RDC</span></div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-server"></i>
+              <div><label data-i18n="about.hosting">Hébergement</label><span>GitHub Pages · Netlify · Render</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="skills.tag">Compétences</span>
+        <h2 data-i18n="skills.title"> Les technologies que je sais manipuler </h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fab fa-html5"></i></div>
+          <div class="skill-info"><span>HTML5</span><div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div><small>75%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <div class="skill-info"><span>CSS3</span><div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div><small>70%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fab fa-js"></i></div>
+          <div class="skill-info"><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" data-pct="58"></div></div><small>58%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <div class="skill-info"><span>Python</span><div class="skill-bar"><div class="skill-fill" data-pct="10"></div></div><small data-i18n="skills.learning">En apprentissage · 10%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fab fa-github"></i></div>
+          <div class="skill-info"><span>GitHub</span><div class="skill-bar"><div class="skill-fill" data-pct="60"></div></div><small>60%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="skill-info"><span>Responsive Design</span><div class="skill-bar"><div class="skill-fill" data-pct="55"></div></div><small>55%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <div class="skill-info"><span data-i18n="skills.hosting">Hébergement Web</span><div class="skill-bar"><div class="skill-fill" data-pct="70"></div></div><small>70%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fas fa-dragon"></i></div>
+          <div class="skill-info"><span>Kali Linux</span><div class="skill-bar"><div class="skill-fill" data-pct="10"></div></div><small>10%</small></div>
+        </div>
+        <div class="skill-item reveal-up">
+          <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="skill-info"><span data-i18n="skills.cyber">Cybersécurité</span><div class="skill-bar"><div class="skill-fill" data-pct="1"></div></div><small data-i18n="skills.notions">Notions · 1%</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="services.tag">Services</span>
+        <h2 data-i18n="services.title">Ce que je propose</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3 data-i18n="srv1.title">Développement Web</h3>
+          <p data-i18n="srv1.desc">Création de sites web modernes, rapides et responsives avec HTML, CSS & JavaScript .</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3 data-i18n="srv2.title">UI / Design Front-end</h3>
+          <p data-i18n="srv2.desc">Interfaces élégantes, animations fluides et expériences utilisateur mémorables.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3 data-i18n="srv3.title">Déploiement & Hébergement</h3>
+          <p data-i18n="srv3.desc">Mise en ligne de projets sur GitHub Pages, Netlify, InfinityFree et Render.</p>
+        </div>
+        
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 data-i18n="srv5.title">Responsive & Optimisation</h3>
+          <p data-i18n="srv5.desc">Sites parfaitement adaptés à tous les écrans – mobile, tablette et desktop.</p>
+        </div>
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fab fa-github"></i></div>
+          <h3 data-i18n="srv6.title">Gestion GitHub</h3>
+          <p data-i18n="srv6.desc">Versioning, collaboration, pull requests et gestion de dépôts professionnels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="projects.tag">Projets</span>
+        <h2 data-i18n="projects.title">Mes réalisations</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up">
+          <div class="project-img">
+            <img src="jeno_1.jpg" alt="JenoTie" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/Jovanimbombo" target="_blank" rel="noopener" aria-label="Voir le code source" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="https://jovanimbombo.github.io/JenoTie/" target="_blank" rel="noopener" aria-label="Voir le projet" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Web App</span>
+            <h3>JenoTie</h3>
+            <p data-i18n="proj1.desc">Plateforme web moderne dédiée à la gestion et la mise en valeur de services digitaux. Interface soignée, UX fluide.</p>
+            <div class="project-techs"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Jovanimbombo" class="btn-sm" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://jovanimbombo.github.io/JenoTie/" class="btn-sm live" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket"></i> <span data-i18n="proj.demo">Live Demo</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up">
+          <div class="project-img">
+            <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&q=80" alt="Serviteurs_inspires" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/Jovanimbombo" target="_blank" rel="noopener" aria-label="Voir le code source" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="https://jovanimbombo.github.io/Serviteurs_inspires/" target="_blank" rel="noopener" aria-label="Voir le projet" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat" data-i18n="proj.cat.website">Site Web</span>
+            <h3>Serviteurs Inspirés</h3>
+            <p data-i18n="proj2.desc">Site communautaire inspirationnel mêlant design épuré et contenu engageant. Navigation intuitive, responsive.</p>
+            <div class="project-techs"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Jovanimbombo" class="btn-sm" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://jovanimbombo.github.io/Serviteurs_inspires/" class="btn-sm live" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket"></i> <span data-i18n="proj.demo">Live Demo</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up">
+          <div class="project-img">
+            <img src="logo (1).jpeg" alt="GK Pressing" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/Jovanimbombo" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="https://jovanimbombo.github.io/Gk-Pressing-Express/" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Business</span>
+            <h3>GK Pressing Express</h3>
+            <p data-i18n="proj3.desc">Site vitrine professionnel pour un service de pressing express. Présentation des offres, tarifs et contact intégré.</p>
+            <div class="project-techs"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Jovanimbombo" class="btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://jovanimbombo.github.io/Gk-Pressing-Express/" class="btn-sm live" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> <span data-i18n="proj.demo">Live Demo</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up">
+          <div class="project-img">
+            <img src="favico.jpeg" alt="EKM Calculatrice" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://jovanimbombo.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="https://jovanimbombo.github.io/EKM_CALCULATRICE/" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat" data-i18n="proj.cat.tool">Outil</span>
+            <h3>EKM Calculatrice</h3>
+            <p data-i18n="proj4.desc">Application calculatrice élégante et fonctionnelle, développée en JavaScript pur avec un design moderne et épuré.</p>
+            <div class="project-techs"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Jovanimbombo" class="btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://jovanimbombo.github.io/EKM_CALCULATRICE/" class="btn-sm live" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> <span data-i18n="proj.demo">Live Demo</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up">
+          <div class="project-img">
+            <img src="icon-512.png" alt="Météo RDC" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/Jovanimbombo" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="https://meteo-rdc.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">API</span>
+            <h3>Météo RDC</h3>
+            <p data-i18n="proj5.desc">Application météo en temps réel pour la RDC. Intégration d'API météo, géolocalisation et design immersif animé.</p>
+            <div class="project-techs"><span>HTML</span><span>CSS</span><span>JS</span><span>API</span></div>
+            <div class="project-links">
+              <a href="https://github.com/Jovanimbombo" class="btn-sm" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://meteo-rdc.onrender.com" class="btn-sm live" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> <span data-i18n="proj.demo">Live Demo</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="journey.tag">Parcours</span>
+        <h2 data-i18n="journey.title">Mon parcours académique</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026 – Présent</span>
+            <h3 data-i18n="jrn1.title">2ème Licence –Genie Informatique</h3>
+            <p class="timeline-place"><i class="fas fa-university"></i> Université Pédagogique Nationale</p>
+            <p data-i18n="jrn1.desc">Spécialisation en développement logiciel , développement web ,programmation avec le langage  java , algorithmique avancée, bases de données et administration de bases de données,Merise,Python etc....</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"><i class="fas fa-book"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 – 2025</span>
+            <h3 data-i18n="jrn2.title">1ère Licence –Mathématique Informatique</h3>
+            <p class="timeline-place"><i class="fas fa-university"></i> Université Pédagogique Nationale</p>
+            <p data-i18n="jrn2.desc">Algèbre , logique math , programmation avec le langage c , etc...</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025 – 2026</span>
+            <h3 data-i18n="jrn3.title">Autodidacte – Développement Web , Programation python</h3>
+            <p class="timeline-place" data-i18n="jrn3.place"><i class="fas fa-globe"></i> En ligne – YouTube, Open classroom , GitHub , Cisco</p>
+            <p data-i18n="jrn3.desc">Apprentissage intensif de HTML, CSS et JavaScript. Premiers projets personnels et découverte du monde du dev. Apprentissage  du langage python et autre chose sur la tech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="lang.tag">Langues</span>
+        <h2 data-i18n="lang.title">Langues maîtrisées</h2>
+      </div>
+      <div class="lang-grid">
+        <div class="lang-card reveal-up">
+          <div class="lang-flag">🇫🇷</div>
+          <h3>Français</h3>
+          <p data-i18n="lang.fr">Langue principale</p>
+          <div class="lang-dots">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="lang-card reveal-up">
+          <div class="lang-flag">🇨🇩</div>
+          <h3>Lingala</h3>
+          <p data-i18n="lang.lin">Langue locale · En apprentissage</p>
+          <div class="lang-dots">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="lang-card reveal-up">
+          <div class="lang-flag">🇨🇩</div>
+          <h3>Tshiluba</h3>
+          <p data-i18n="lang.tshi">Langue nationale · Courant</p>
+          <div class="lang-dots">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="lang-card reveal-up">
+          <div class="lang-flag">🇬🇧</div>
+          <h3>English</h3>
+          <p data-i18n="lang.en">En apprentissage · Intermédiaire</p>
+          <div class="lang-dots">
+            <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag" data-i18n="contact.tag">Contact</span>
+        <h2 data-i18n="contact.title">Travaillons ensemble</h2>
+        <p class="section-sub" data-i18n="contact.sub">Une idée ? Un projet ? N'hésitez pas à me contacter.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div><label data-i18n="contact.location">Localisation</label><span>Kinshasa, RDC</span></div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div><label>GitHub</label><a href="#" target="_blank">@JovaniMbombo</a></div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin-in"></i>
+            <div><label>LinkedIn</label><a href="#" target="_blank">Jovani Mbombo</a></div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/_m_jovani/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@jovanimbombo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/share/1YSuZLGWkG/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/jovanimbombo" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.snapchat.com/add/jovani253643?share_id=has4jjHLocI&locale=fr-FR" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
+            <a href="https://wa.me/243854818401" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <form class="contact-form reveal-right" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name" data-i18n="form.name">Nom complet</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom" data-i18n-placeholder="form.namePh" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form.email">Adresse email</label>
+            <input type="email" id="email" name="email" required placeholder="votre@email.com" data-i18n-placeholder="form.emailPh" />
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.msg">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message..." data-i18n-placeholder="form.msgPh"></textarea>
+          </div>
+          <input type="hidden" name="title" value="Nouveau message depuis le portfolio" />
+          <button type="submit" class="btn-primary full" id="form-submit">
+            <span data-i18n="form.send">Envoyer le message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">JOVANI MBOMBO<span class="logo-dot">.</span></span>
+          <p data-i18n="footer.tagline">Développeur Web Junior · Kinshasa, RDC</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about"    data-i18n="nav.about">À propos</a>
+          <a href="#projects" data-i18n="nav.projects">Projets</a>
+          <a href="#contact"  data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://github.com/Jovanimbombo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jovani-mbombo-099b6235a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/_m_jovani/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/243854818401" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Jovani Mbombo · <em>Each Bug Matters</em></p>
+        <p data-i18n="footer.made">Conçu &amp; développé  par Jovani</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" data-i18n-aria="back-to-top.label" aria-label="Retour en haut">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("PreCECymUp6EdxMyE"); // Ma clé EmailJS
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
