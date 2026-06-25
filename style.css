@@ -823,7 +823,7 @@ section { position: relative; z-index: 1; }
     padding: .8rem 1rem;
   }
 
-  .avatar-frame { width: 75vw;max-width: 300px; height: auto; }
+  .avatar-frame { width: 85vw;max-width: 300px; height: auto; }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -873,7 +873,7 @@ section { position: relative; z-index: 1; }
 
   .hero-name { font-size: clamp(1.85rem, 11vw, 2.8rem); }
   .avatar-frame {
-     width: 75vw;                  /* La photo prendra 75% de la largeur de l'écran du téléphone */
+     width: 80vw;                  /* La photo prendra 75% de la largeur de l'écran du téléphone */
   max-width: 300px;             /* Elle ne dépassera pas 300px sur un écran moyen */
   height: auto;
   }
@@ -906,7 +906,7 @@ section { position: relative; z-index: 1; }
   
   /* CORRECTION FLUIDE : Plus de taille fixe en px ici ! */
   .avatar-frame { 
-    width: 70vw; 
+    width: 90vw; 
     max-width: 240px; 
     height: auto; 
   }
