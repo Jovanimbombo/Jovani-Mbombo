@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════════════
-   JOVANI MBOMBO – PORTFOLIO · STYLE.CSS
-   Each Bug Matters · 2026
-══════════════════════════════════════════════ */
 
 /* ── CSS VARIABLES ── */
 :root {
@@ -320,14 +316,21 @@ body.cursor-hover #cursor-ring { width: 56px; height: 56px; opacity: .3; }
 }
 .avatar-frame {
   position: relative;
-  width: clamp(280px, 30vw, 360px); 
-  height: clamp(280px, 30vw, 360px);
+  width: 100%; 
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
   border-radius: 8px;           
   overflow: hidden;             
   border: 4px solid var(--surface);
   box-shadow: var(--shadow);    
   animation: none;              
   transition: transform var(--trans);
+  margin: 0 auto;
+}
+.avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* Ta photo remplit le carré sans se déformer */
 }
 @keyframes morph-shape {
   
@@ -870,7 +873,11 @@ section { position: relative; z-index: 1; }
   .nav-logo { font-size: 1.35rem; }
 
   .hero-name { font-size: clamp(1.85rem, 11vw, 2.8rem); }
-  .avatar-frame { width: 170px; height: 170px; }
+  .avatar-frame {
+     width: 75vw;                  /* La photo prendra 75% de la largeur de l'écran du téléphone */
+  max-width: 300px;             /* Elle ne dépassera pas 300px sur un écran moyen */
+  height: auto;
+  }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
   .stat-card  { padding: 1rem .85rem; }
