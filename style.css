@@ -824,7 +824,7 @@ section { position: relative; z-index: 1; }
     padding: .8rem 1rem;
   }
 
-  .avatar-frame { width: 190px; height: 190px; }
+  .avatar-frame { width: 75vw;max-width: 300px; height: auto; }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
