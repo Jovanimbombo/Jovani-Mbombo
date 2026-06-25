@@ -316,21 +316,20 @@ body.cursor-hover #cursor-ring { width: 56px; height: 56px; opacity: .3; }
 }
 .avatar-frame {
   position: relative;
-  width: 100%; 
-  max-width: 420px;
-  aspect-ratio: 1 / 1;
-  border-radius: 8px;           
+  width: 90%;                     /* S'élargit automatiquement sur l'écran du téléphone */
+  max-width: 340px;               /* Évite que la photo devienne trop géante si l'écran est grand */
+  border-radius: 12px;           
   overflow: hidden;             
   border: 4px solid var(--surface);
   box-shadow: var(--shadow);    
-  animation: none;              
   transition: transform var(--trans);
-  margin: 0 auto;
+  margin: 0 auto 25px auto;       /* Centre la photo et donne de l'air avec le texte en dessous */
 }
+
 .avatar-frame img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;            /* Ta photo remplit le carré sans se déformer */
+  height: auto;                   /* Magique : la photo garde ses proportions normales sans être coupée */
+  display: block;                 
 }
 @keyframes morph-shape {
   
