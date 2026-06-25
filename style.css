@@ -903,7 +903,13 @@ section { position: relative; z-index: 1; }
 /* ── 380px (petits mobiles : iPhone SE, Galaxy A) ── */
 @media (max-width: 380px) {
   .hero-name { font-size: clamp(1.65rem, 12vw, 2.4rem); }
-  .avatar-frame { width: 150px; height: 150px; }
+  
+  /* CORRECTION FLUIDE : Plus de taille fixe en px ici ! */
+  .avatar-frame { 
+    width: 70vw; 
+    max-width: 240px; 
+    height: auto; 
+  }
 
   .hero-socials a { width: 36px; height: 36px; font-size: .85rem; }
 
@@ -927,7 +933,6 @@ section { position: relative; z-index: 1; }
 
   .btn-sm { font-size: .75rem; padding: .4rem .75rem; }
 }
-
 /* ── Fix tilt 3D désactivé sur tactile ── */
 @media (pointer: coarse) {
   .project-card:hover { transform: translateY(-4px) !important; }
@@ -935,9 +940,13 @@ section { position: relative; z-index: 1; }
   .project-card:active { transform: scale(0.98) !important; }
 }
 
-/* ── Fix image hero sur très petits écrans ── */
 @media (max-width: 350px) {
-  .avatar-frame { width: 130px; height: 130px; }
+  /* CORRECTION FLUIDE : Reste proportionnel même sur mini écran */
+  .avatar-frame { 
+    width: 65vw; 
+    max-width: 200px; 
+    height: auto; 
+  }
   .hero-name    { font-size: 1.5rem; }
   .section-container { padding: 3rem 4vw; }
   .stats-grid   { grid-template-columns: 1fr; }
